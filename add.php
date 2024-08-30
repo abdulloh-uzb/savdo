@@ -4,6 +4,7 @@ require_once "database.php";
 
 
 if (!empty($_POST)) {
+
     $title = $_POST['title'];
     $qty = $_POST['qty'];
     $price = $_POST['price'];
@@ -19,7 +20,6 @@ if (!empty($_POST)) {
         'width'=>$width,
         'id' => $id
     ];
-
     $db->create('carpets', $data);
 
 }
@@ -28,7 +28,7 @@ if (!empty($_POST)) {
 
 
 
-<form action="main.php" method="post">
+<form action="add.php" method="post">
 
     <label for="">Nomi</label>
     <input type="text" name="title">
@@ -43,11 +43,11 @@ if (!empty($_POST)) {
     <br>
 
     <label for="">Bo'yi</label>
-    <input type="text" name="height">
+    <input type="number" name="height">
     <br>
 
     <label for="">Eni</label>
-    <input type="text" name="width">
+    <input type="number" name="width">
     <br>
 
     <button type="submit">Qo'shish</button>
