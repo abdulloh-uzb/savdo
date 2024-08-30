@@ -21,7 +21,7 @@ $carpets = $db->read('carpets');
             <td><?= $carpet['price'] ?></td>
             <td><?= $carpet['qty'] ?></td>
             <td>
-                <form action="buy.php" method="post">
+                <form action="buy.php" method="POST">
                     <input type="text" name="id" value="<?= $carpet['id'] ?>" hidden>
                     <button type="submit">Sotish</button>
                 </form>
